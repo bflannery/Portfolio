@@ -1,10 +1,10 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import ContactForm from "./components/ContactForm";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+import LocationMap from './components/LocationMap'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,7 +46,9 @@ export default function Contact() {
                         <Typography
                             variant="h2"
                             className={classes.formTitleContainer}
-                        > Contact Me </Typography>
+                        >
+                            Contact Me
+                        </Typography>
                         <ContactForm />
                     </Container>
                 </Grid>
@@ -56,9 +58,7 @@ export default function Contact() {
                     xs={12}
                     item
                 >
-                    <Paper className={classes.paper}>
-                        Location Layout
-                    </Paper>
+                   <LocationMap />
                 </Grid>
             </Grid>
         </Grid>
