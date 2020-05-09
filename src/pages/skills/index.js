@@ -7,14 +7,13 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    skillsRow: {
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'row',
-    },
 }));
 
 const skills = {
+    javascript: {
+        title: 'Javascript',
+        description: 'is a lightweight, interpreted programming language'
+    },
     react: {
         title: 'React',
         description: 'React is a UI library'
@@ -25,7 +24,31 @@ const skills = {
     },
     webpack: {
         title: 'Webpack',
-        description: 'Application file bundler '
+        description: 'Application file bundler'
+    },
+    python: {
+        title: 'Python',
+        description: 'is an interpreted, general-purpose programming language'
+    },
+    falcon: {
+        title: 'Falcon',
+        description: 'Application file bundler'
+    },
+    alchemy: {
+        title: 'SQLAlchemy',
+        description: 'Application file bundler'
+    },
+    mysql: {
+        title: 'MySQL',
+        description: 'Relational Database'
+    },
+    mongo: {
+        title: 'MongoDB',
+        description: 'Non-Relational Database'
+    },
+    aws: {
+        title: 'AWS',
+        description: 'Cloud Computing'
     }
 }
 
@@ -33,17 +56,55 @@ export default function Skills() {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.root}>
-            <Grid container spacing={3}>
+        <Grid className={classes.root} spacing={2}>
+            <Grid xs={12} item>
                 <Grid
                     className={classes.skillsRow}
-                    lg={12}
-                    xs={12}
-                    item
+                    container
+                    spacing={3}
                 >
-                    <SkillCard skill={skills['react']} />
-                    <SkillCard skill={skills['redux']} />
-                    <SkillCard skill={skills['webpack']} />
+                    <Grid item>
+                        <SkillCard skill={skills['javascript']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['react']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['redux']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['webpack']} />
+                    </Grid>
+                </Grid>
+                <Grid
+                    className={classes.skillsRow}
+                    container
+                    spacing={3}
+                >
+                    <Grid item>
+                        <SkillCard skill={skills['python']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['falcon']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['alchemy']} />
+                    </Grid>
+                </Grid>
+                <Grid
+                    className={classes.skillsRow}
+                    container
+                    spacing={3}
+                >
+                    <Grid item>
+                        <SkillCard skill={skills['mysql']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['mongo']} />
+                    </Grid>
+                    <Grid item>
+                        <SkillCard skill={skills['alchemy']} />
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
