@@ -1,7 +1,7 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import SkillCard from "./components/SkillCard";
+import SkillsListCard from "./components/SkillsListCard";
 
 const useStyles = makeStyles( {
     root: {
@@ -84,28 +84,13 @@ export default function Skills() {
                     spacing={3}
                 >
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['html']} />
+                        <SkillsListCard skill={skills['html']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['css']} />
+                        <SkillsListCard skill={skills['css']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['javascript']} />
-                    </Grid>
-                </Grid>
-                <Grid
-                    className={classes.skillsRow}
-                    container
-                    spacing={3}
-                >
-                    <Grid item lg={4}>
-                        <SkillCard skill={skills['react']} />
-                    </Grid>
-                    <Grid item lg={4}>
-                        <SkillCard skill={skills['redux']} />
-                    </Grid>
-                    <Grid item lg={4}>
-                        <SkillCard skill={skills['webpack']} />
+                        <SkillsListCard skill={skills['javascript']} />
                     </Grid>
                 </Grid>
                 <Grid
@@ -114,13 +99,13 @@ export default function Skills() {
                     spacing={3}
                 >
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['python']} />
+                        <SkillsListCard skill={skills['react']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['falcon']} />
+                        <SkillsListCard skill={skills['redux']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['alchemy']} />
+                        <SkillsListCard skill={skills['webpack']} />
                     </Grid>
                 </Grid>
                 <Grid
@@ -129,13 +114,28 @@ export default function Skills() {
                     spacing={3}
                 >
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['mysql']} />
+                        <SkillsListCard skill={skills['python']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['mongo']} />
+                        <SkillsListCard skill={skills['falcon']} />
                     </Grid>
                     <Grid item lg={4}>
-                        <SkillCard skill={skills['aws']} />
+                        <SkillsListCard skill={skills['alchemy']} />
+                    </Grid>
+                </Grid>
+                <Grid
+                    className={classes.skillsRow}
+                    container
+                    spacing={3}
+                >
+                    <Grid item lg={4}>
+                        <SkillsListCard skill={skills['mysql']} />
+                    </Grid>
+                    <Grid item lg={4}>
+                        <SkillsListCard skill={skills['mongo']} />
+                    </Grid>
+                    <Grid item lg={4}>
+                        <SkillsListCard skill={skills['aws']} />
                     </Grid>
                 </Grid>
             </Grid>

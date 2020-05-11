@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function SkillCard({ skill }) {
+export default function SkillsListCard({ skill }) {
     const classes = useStyles();
 
     const history = useHistory();
