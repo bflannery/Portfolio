@@ -20,7 +20,7 @@ export default {
   },
   secondary: {
     contrastText: white,
-    main: '#7d58ff',
+    main: '#fc0953',
     light: '#eceafc',
     dark: '#4020b1'
   },

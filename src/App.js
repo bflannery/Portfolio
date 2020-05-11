@@ -9,7 +9,6 @@ import HomeIcon from '@material-ui/icons/HomeOutlined';
 import MailIcon from '@material-ui/icons/MailOutlined';
 import SettingsIcon from '@material-ui/icons/SettingsOutlined';
 import PersonIcon from '@material-ui/icons/PersonOutlined';
-import VisibilityIcon from '@material-ui/icons/VisibilityOutlined';
 import { NavLink} from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: "#0cfdd8",
+        color: theme.palette.primary.main,
         backgroundColor: 'black'
     },
     iconListContainer: {
@@ -54,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '1rem'
     },
     navIcon: {
-        color: "#0cfdd8",
+        color: theme.palette.primary.main,
         margin: '0.25rem 0'
     },
     content: {
@@ -103,13 +102,6 @@ const AppWrap = ({ children }) => {
                             <NavLink to={"/skills"}>
                                 <ListItemIcon>
                                     <SettingsIcon className={classes.navIcon} />
-                                </ListItemIcon>
-                            </NavLink>
-                        </ListItem>
-                        <ListItem button>
-                            <NavLink to={"/work"}>
-                                <ListItemIcon>
-                                    <VisibilityIcon className={classes.navIcon} />
                                 </ListItemIcon>
                             </NavLink>
                         </ListItem>
